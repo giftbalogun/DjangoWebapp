@@ -1,0 +1,44 @@
+<!-- Filter Search Section Begin -->
+<div class="filter-search">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-12">
+                <form class="filter-form" action="{% url 'search' %}">
+                    <div class="location">
+                        <p>State</p>
+                        <select class="filter-location">
+                            <option selected="true" disabled="disabled">Select State</option>
+                            {% for key,value in state_choices.items %}
+                            <option value="{{key}}" {% if key == values.state %} selected {% endif %}>{{value}}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="location">
+                        <p>Price</p>
+                        <select class="filter-location">
+                            <option selected="true" disabled="disabled">Select Price</option>
+                            {% for key,value in price_choices.items %}
+                            <option value="{{key}}" {% if key == values.price %} selected {% endif %}>{{value}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="location">
+                        <p>Bedrooms</p>
+                        <select class="filter-location">
+                            <option selected="true" disabled="disabled">Select Bedroom</option>
+                            {% for key,value in bedroom_choices.items %}
+                            <option value="{{key}}" {% if key == values.bedrooms %} selected {% endif %}>{{value}}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="search-btn">
+                        <button type="submit"><i class="flaticon-search"></i>Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Filter Search Section End -->
