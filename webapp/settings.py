@@ -155,7 +155,3 @@ EMAIT_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'blgnbalogun53@gmail.com'
 EMAIL_HOST_PASSWORD = 'password040'
-
-
-prod_db = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
