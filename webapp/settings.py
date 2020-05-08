@@ -27,7 +27,7 @@ SECRET_KEY = 'ipj$kqrkcip(ucys^8v$ysir56n1)tem5(0tp0enx#f$(jw@=h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['giftbalogun.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
