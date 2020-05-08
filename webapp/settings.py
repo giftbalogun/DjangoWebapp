@@ -83,16 +83,8 @@ WSGI_APPLICATION = 'webapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.mysql',
-        # Or path to database file if using sqlite3.
-        'NAME': 'estate',
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        # Set to empty string for localhost. Not used with sqlite3.
-        'HOST': '',
-        # Set to empty string for default. Not used with sqlite3.
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -133,7 +125,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [

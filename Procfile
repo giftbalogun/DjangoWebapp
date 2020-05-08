@@ -1,1 +1,1 @@
-web: gunicorn djangowebapp.wsgi --log-file -
+web: gunicorn webapp.wsgi
